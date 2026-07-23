@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel & Guest Accommodation Supplies | Gellings, Isle of Man</title>
+<meta name="description" content="Trade supplies for Isle of Man hotels and guest houses — amenities, paper products, laundry, housekeeping chemicals and care essentials. Free IOM delivery since 1965.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1a2340;
+    --navy-soft:#2a3358;
+    --teal:#54b2ac;
+    --teal-deep:#3a8f8a;
+    --cream:#f7f5f1;
+    --paper:#fffdf9;
+    --ink:#1a2340;
+    --grey:#6b6f76;
+    --brass:#c9a227;
+    --line:rgba(26,35,64,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+
+  /* Top bar */
+  .topbar{
+    background:var(--navy);
+    color:#dfe6f2;
+    font-size:13px;
+    letter-spacing:.02em;
+  }
+  .topbar .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:10px;padding-bottom:10px;
+    flex-wrap:wrap;gap:8px;
+  }
+  .topbar a.back{color:#9fb4d6;}
+  .topbar a.back:hover{color:#fff;}
+
+  /* Header */
+  header.site{
+    background:var(--navy);
+    color:#fff;
+    padding:56px 0 84px;
+    position:relative;
+    overflow:hidden;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal);font-weight:600;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";width:26px;height:1px;background:var(--teal);display:inline-block;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(38px,5.4vw,64px);
+    line-height:1.04;
+    letter-spacing:-0.01em;
+    max-width:11ch;
+    color:#fbf9f5;
+  }
+  h1 em{
+    font-style:italic;color:var(--teal);font-weight:400;
+  }
+  .hero-sub{
+    max-width:46ch;
+    font-size:17.5px;
+    color:#c4cde3;
+    margin-top:24px;
+  }
+  .hero-row{
+    display:flex;gap:56px;flex-wrap:wrap;align-items:flex-start;
+    margin-top:8px;
+  }
+  .hero-copy{flex:1 1 480px;}
+  .hero-actions{
+    display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:14px 26px;
+    font-size:14.5px;font-weight:600;
+    border-radius:2px;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-primary{background:var(--teal);color:var(--navy);}
+  .btn-primary:hover{background:#68c1bb;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:#f2f4f8;}
+  .btn-ghost:hover{border-color:#fff;}
+
+  /* Hero illustration: linework key + bell motif */
+  .hero-art{
+    flex:0 0 300px;
+    align-self:center;
+  }
+  .hero-art svg{width:100%;height:auto;}
+
+  /* Delivery ribbon — signature element */
+  .ribbon{
+    background:var(--teal);
+    color:var(--navy);
+  }
+  .ribbon .wrap{
+    display:flex;
+    align-items:stretch;
+    padding:0;
+    overflow-x:auto;
+  }
+  .ribbon-day{
+    flex:1 1 0;
+    text-align:center;
+    padding:16px 8px;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    border-right:1px solid rgba(26,35,64,0.15);
+    white-space:nowrap;
+    min-width:74px;
+  }
+  .ribbon-day.off{color:rgba(26,35,64,0.4);font-weight:500;}
+  .ribbon-day span{display:block;font-size:10.5px;font-weight:500;letter-spacing:.05em;margin-top:2px;opacity:.75;}
+  .ribbon-day:last-child{border-right:none;}
+
+  /* Section framing */
+  section{padding:76px 0;}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    gap:24px;margin-bottom:44px;flex-wrap:wrap;
+  }
+  .section-tag{
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal-deep);font-weight:700;margin-bottom:10px;display:block;
+  }
+  h2{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:clamp(26px,3vw,36px);
+    color:var(--navy);letter-spacing:-0.01em;
+  }
+  .section-note{max-width:38ch;color:var(--grey);font-size:15px;}
+
+  /* Why section: pain-point pairs */
+  .why-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .why-card{background:var(--paper);padding:32px 28px;}
+  .why-num{
+    font-family:'Fraunces',serif;font-size:14px;color:var(--brass);
+    font-weight:600;margin-bottom:14px;letter-spacing:.02em;
+  }
+  .why-card h3{
+    font-family:'Fraunces',serif;font-weight:500;font-size:19px;
+    margin-bottom:10px;color:var(--navy);
+  }
+  .why-card p{color:var(--grey);font-size:14.5px;}
+
+  /* Category grid */
+  .cat-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .cat-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:26px 24px;
+    display:flex;flex-direction:column;gap:6px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .cat-card:hover{border-color:var(--teal);transform:translateY(-2px);}
+  .cat-icon{
+    width:34px;height:34px;color:var(--teal-deep);margin-bottom:6px;
+  }
+  .cat-card h3{
+    font-family:'Fraunces',serif;font-weight:500;font-size:17px;color:var(--navy);
+  }
+  .cat-card p{font-size:13.5px;color:var(--grey);}
+  .cat-card .go{
+    margin-top:10px;font-size:12.5px;font-weight:700;color:var(--teal-deep);
+    letter-spacing:.03em;text-transform:uppercase;
+  }
+
+  /* Trust bar */
+  .trust{
+    background:var(--navy-soft);color:#eef1f7;
+  }
+  .trust .wrap{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:52px 32px;
+  }
+  .trust-item{border-left:1px solid rgba(255,255,255,0.16);padding-left:20px;}
+  .trust-num{font-family:'Fraunces',serif;font-size:30px;color:var(--teal);}
+  .trust-label{font-size:13px;color:#b7c1da;margin-top:4px;}
+
+  /* CTA */
+  .cta{
+    background:var(--cream);
+    text-align:center;
+  }
+  .cta h2{max-width:16ch;margin:0 auto 16px;}
+  .cta p{max-width:44ch;margin:0 auto 30px;color:var(--grey);}
+
+  footer{
+    background:var(--navy);color:#9fb4d6;font-size:13px;padding:28px 0;
+  }
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:860px){
+    .why-grid{grid-template-columns:1fr;}
+    .cat-grid{grid-template-columns:1fr 1fr;}
+    .trust .wrap{grid-template-columns:1fr 1fr;}
+    .hero-art{display:none;}
+  }
+  @media(max-width:560px){
+    .cat-grid{grid-template-columns:1fr;}
+    .trust .wrap{grid-template-columns:1fr;}
+    .ribbon-day{min-width:58px;font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Trade supplies for Isle of Man hospitality, since 1965</span>
+    <a class="back" href="https://www.gellings.im/">&larr; Back to Gellings.im</a>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap hero-row">
+    <div class="hero-copy">
+      <span class="eyebrow">Hotels &amp; Guest Accommodation</span>
+      <h1>Everything your rooms and back-of-house need, <em>delivered.</em></h1>
+      <p class="hero-sub">From guest amenities to laundry chemicals and paper products — Gellings supplies Isle of Man hotels and guest houses with free island-wide delivery and next-day availability on core lines.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.gellings.im/prod_cat/C_restaurant-bar-and-hotel-_29.asp">Shop Hotel Amenities</a>
+        <a class="btn btn-ghost" href="https://www.gellings.im/page_551285.asp">Open a Trade Account</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="120" cy="60" r="34" stroke="#54b2ac" stroke-width="2"/>
+        <circle cx="120" cy="60" r="10" stroke="#54b2ac" stroke-width="2"/>
+        <rect x="112" y="94" width="16" height="80" rx="3" stroke="#54b2ac" stroke-width="2"/>
+        <path d="M112 150 L92 150 L92 162 L112 162" stroke="#54b2ac" stroke-width="2"/>
+        <path d="M112 174 L96 174 L96 186 L112 186" stroke="#54b2ac" stroke-width="2"/>
+        <path d="M20 220 Q120 190 220 220" stroke="#3a8f8a" stroke-width="1.4" stroke-dasharray="2 6"/>
+        <text x="120" y="248" text-anchor="middle" fill="#9fb4d6" font-family="Inter" font-size="11" letter-spacing="2">ROOM KEY</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon" role="img" aria-label="Delivery days Monday to Friday, closed weekends">
+  <div class="wrap">
+    <div class="ribbon-day">Mon<span>Delivery</span></div>
+    <div class="ribbon-day">Tue<span>Delivery</span></div>
+    <div class="ribbon-day">Wed<span>Delivery</span></div>
+    <div class="ribbon-day">Thu<span>Delivery</span></div>
+    <div class="ribbon-day">Fri<span>Delivery</span></div>
+    <div class="ribbon-day off">Sat<span>Closed</span></div>
+    <div class="ribbon-day off">Sun<span>Closed</span></div>
+  </div>
+</div>
+
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">Why hotels stock with Gellings</span>
+        <h2>Built around how a hotel actually runs</h2>
+      </div>
+      <p class="section-note">Housekeeping, front desk and F&B all draw from the same stockroom — so ordering shouldn't mean three different suppliers.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>One order, every department</h3>
+        <p>Guest amenities, toilet tissue, laundry chemicals and dishwash lines on a single trade account — one delivery, one invoice.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>Free island-wide delivery</h3>
+        <p>Weekday delivery across the Isle of Man as standard, with same-day collection or delivery available on request for urgent shortfalls.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Sixty years on the island</h3>
+        <p>Gellings has supplied Isle of Man hospitality since 1965 — local stock, local knowledge, no mainland courier delays.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">Shop by department</span>
+        <h2>What your hotel needs, in one place</h2>
+      </div>
+    </div>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="https://www.gellings.im/prod_cat/C_hotel-amenities-_115.asp">
+        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="7" width="16" height="12" rx="1.5"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+        <h3>Guest Amenities</h3>
+        <p>Toiletries, hospitality trays and in-room essentials for every room grade.</p>
+        <span class="go">View range &rarr;</span>
+      </a>
+
+      <a class="cat-card" href="https://www.gellings.im/prod_cat/C_hotel-and-facial-tissues-_154.asp">
+        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4v4M12 16v4"/></svg>
+        <h3>Paper &amp; Tissue</h3>
+        <p>Toilet tissue, hand towels and facial tissue for guest rooms and public areas.</p>
+        <span class="go">View range &rarr;</span>
+      </a>
+
+      <a class="cat-card" href="https://www.gellings.im/prod_cat/C_housekeeping-and-room-care-_350.asp">
+        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l6-14 6 14"/><path d="M6.5 14h7"/></svg>
+        <h3>Housekeeping &amp; Room Care</h3>
+        <p>Cleaning chemicals and consumables sized for daily housekeeping rounds.</p>
+        <span class="go">View range &rarr;</span>
+      </a>
+
+      <a class="cat-card" href="https://www.gellings.im/prod_cat/C_laundry_353.asp">
+        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="13" r="6"/><circle cx="12" cy="13" r="2.4"/><path d="M8 6.5h8"/></svg>
+        <h3>Laundry</h3>
+        <p>Powders, liquids and fabric softener for linen and staff uniforms at scale.</p>
+        <span class="go">View range &rarr;</span>
+      </a>
+
+      <a class="cat-card" href="https://www.gellings.im/prod_cat/C_dishwashing-and-glasswashing-_344.asp">
+        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 10h14l-1.5 9h-11z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg>
+        <h3>Dishwash &amp; Glasswash</h3>
+        <p>Automatic wash chemicals and rinse aid for hotel bar and restaurant kitchens.</p>
+        <span class="go">View range &rarr;</span>
+      </a>
+
+      <a class="cat-card" href="https://www.gellings.im/prod_cat/C_care-and-healthcare_138.asp">
+        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg>
+        <h3>Care &amp; Accessibility</h3>
+        <p>Continence and care products for accessible rooms and guest support needs.</p>
+        <span class="go">View range &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="trust" style="padding:0;">
+  <div class="wrap">
+    <div class="trust-item"><div class="trust-num">1965</div><div class="trust-label">Trading on the Isle of Man since</div></div>
+    <div class="trust-item"><div class="trust-num">Free</div><div class="trust-label">Island-wide delivery, standard</div></div>
+    <div class="trust-item"><div class="trust-num">Mon&ndash;Fri</div><div class="trust-label">Scheduled weekday delivery</div></div>
+    <div class="trust-item"><div class="trust-num">1</div><div class="trust-label">Trade account, every department</div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <span class="section-tag" style="display:block;text-align:center;">Ready when you are</span>
+    <h2>Open a trade account for your hotel</h2>
+    <p>Set up a Gellings trade account for better pricing across amenities, paper, laundry and housekeeping — all on one invoice.</p>
+    <a class="btn btn-primary" href="https://www.gellings.im/page_551285.asp">Open a Trade Account</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; Gellings, Kirby Farm Industrial Estate, Braddan, Isle of Man</span>
+    <span>01624 671200 &middot; info@gellings.im</span>
+  </div>
+</footer>
+
+</body>
+</html>
